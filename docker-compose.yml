@@ -3,10 +3,10 @@ services:
   postgres:
     image: postgres:13.1-alpine
     ports:
-      - '8080:8080'
+      - '5432:5432'
     volumes:
       - ./data:/var/lib/postgresql
     environment:
-      - POSTGRES_DATABASE=appDB
+      - POSTGRES_DB=appDB
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=password
